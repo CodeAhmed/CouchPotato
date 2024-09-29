@@ -1,5 +1,5 @@
 import argparse
 
 def cmd_couchpotato():
-    print "Couchpotato."
+    print ("Couchpotato.")
     pass
