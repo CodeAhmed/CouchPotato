@@ -9,7 +9,7 @@ import traceback
 
 
 try:
-    from couchpotato import cli
+    from src.couchpotato import cli
 except ImportError:
     print ("Checking local dependencies...")
     if isfile(__file__):
@@ -52,5 +52,5 @@ except ImportError:
         # Running from Titanium
         raise NotImplementedError("Don't know how to do that.")
 
-
-cli.cmd_couchpotato()
+if __name__ == "__main__":
+    cli.cmd_couchpotato()
