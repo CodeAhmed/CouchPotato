@@ -28,7 +28,7 @@ class File(Entity):
     part = Field(Integer)
     release = ManyToOne('Release')
     # Let's remember the size so we know about offline media.
-    size = Field(Integer)
+    size = Field(Integer, nullable=False)
     type = ManyToOne('FileType')
 class FileType(Entity):
     """Types could be trailer, subtitle, movie, partial movie etc."""
