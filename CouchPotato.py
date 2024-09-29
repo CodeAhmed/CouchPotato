@@ -9,7 +9,7 @@ import traceback
 
 
 try:
-    from src.couchpotato import cli
+    from couchpotato import cli
 except ImportError:
     print ("Checking local dependencies...")
     if isfile(__file__):
