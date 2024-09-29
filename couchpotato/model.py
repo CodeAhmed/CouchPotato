@@ -32,5 +32,6 @@ class File(Entity):
     type = ManyToOne('FileType')
 class FileType(Entity):
     """Types could be trailer, subtitle, movie, partial movie etc."""
-    name = Field(UnicodeString(255))
+    identifier = Field(String(20), unique=True)
+    name = Field(UnicodeString(255), nullable=False)
     files = OneToMany('File')
